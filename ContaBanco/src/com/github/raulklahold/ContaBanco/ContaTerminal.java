@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class ContaTerminal {
 
 	public static void main(String[] args) {
+		try {
 
 		ColetarDados Conta = new ColetarDados();
 		Scanner scanner = new Scanner(System.in);
@@ -38,6 +39,11 @@ public class ContaTerminal {
 		System.out.print("\n sua agência é: "+NumeroAgencia);
 		System.out.print("\n o numero da sua conta é: "+NumeroConta);
 		System.out.print("\n e o seu saldo é: "+QtSaldo);
+		
+
+    } catch (Exception e) {
+        System.out.println("Ocorreu um erro inesperado: " + e.getMessage());
+    }
 	}
 
 }
